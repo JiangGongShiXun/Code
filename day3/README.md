@@ -30,3 +30,10 @@ npm i request
 ```js
 npm i express
 ```
+
+# mysql
+
+先安装mysql第三方模块依赖包
+```js
+npm i mysql
+```
