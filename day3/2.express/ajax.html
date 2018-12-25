@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>发送</button>
+    <script src="jquery.js"></script>
+    <script>
+        $("button").click(function () {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:3000/login",
+                data: {
+                    name: "ly",
+                    age: 2
+                },
+                success: function (data) {
+                    console.log(data)
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
