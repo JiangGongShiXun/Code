@@ -1,0 +1,75 @@
+{
+    "grid": {
+        "size": 4,
+        "cells": [
+            [null, null, {
+                "position": {
+                    "x": 0,
+                    "y": 2
+                },
+                "value": 2
+            }, {
+                "position": {
+                    "x": 0,
+                    "y": 3
+                },
+                "value": 4
+            }],
+            [null, {
+                "position": {
+                    "x": 1,
+                    "y": 1
+                },
+                "value": 4
+            }, {
+                "position": {
+                    "x": 1,
+                    "y": 2
+                },
+                "value": 4
+            }, {
+                "position": {
+                    "x": 1,
+                    "y": 3
+                },
+                "value": 2
+            }],
+            [null, null, {
+                "position": {
+                    "x": 2,
+                    "y": 2
+                },
+                "value": 16
+            }, {
+                "position": {
+                    "x": 2,
+                    "y": 3
+                },
+                "value": 8
+            }],
+            [null, {
+                "position": {
+                    "x": 3,
+                    "y": 1
+                },
+                "value": 4
+            }, {
+                "position": {
+                    "x": 3,
+                    "y": 2
+                },
+                "value": 4096
+            }, {
+                "position": {
+                    "x": 3,
+                    "y": 3
+                },
+                "value": 1024
+            }]
+        ]
+    },
+    "score": 84144,
+    "over": false,
+    "won": true,
+    "keepPlaying": true
+}
