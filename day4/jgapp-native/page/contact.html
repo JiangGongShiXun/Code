@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Contacts Example</title>
+		<script type="text/javascript">
+			// 监听plusready事件  
+			document.addEventListener("plusready", function() {}, false);
+			function find() {
+				plus.contacts.getAddressBook(plus.contacts.ADDRESSBOOK_PHONE, function(addressbook) {
+					addressbook.find([], function(contacts) {
+						console.log(JSON.stringify(contacts))
+						alert(contacts.length);
+					}, function() {
+						alert("error");
+					}, {
+						multiple: true
+					});
+				}, function(e) {
+					alert("Get address book failed: " + e.message);
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<style>
+			button{
+				width: 300px;
+				height: 300px;
+			}
+		</style>
+		<button onclick="find()">Find</button>
+	</body>
+</html>
