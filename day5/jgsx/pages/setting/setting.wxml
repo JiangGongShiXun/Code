@@ -1,0 +1,11 @@
+<!--pages/setting/setting.wxml-->
+<!-- V -->
+<text>演员</text>
+<text>{{name}}</text>
+<text>技能</text>
+<text>{{skill}}</text>
+
+
+<view wx:for="{{skill}}">{{item}}</view>
+<view wx:if="{{age >= 19}}">WEBVIEW</view>
+<view bindtap="add">按钮</view>

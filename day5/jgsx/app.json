@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/setting/setting"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#666666",
+    "navigationBarTitleText": "CNODE",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50,
+    "pageOrientation": "auto"
+  },
+  "tabBar": {
+    "position": "top",
+    "selectedColor": "#666",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/smile.png",
+        "selectedIconPath": "icons/frown.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志页"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "设置"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug": true
+}
