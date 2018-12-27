@@ -1,13 +1,24 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">老姚</text>
-  </view>
-</view>
+
+<!-- <van-search value="{{ value }}" placeholder="请输入搜索关键词" /> -->
+<!-- <i-notice-bar icon="systemprompt" loop>
+  2018年世界杯,将于6月14日至7月15日举行;2018年世界杯,将于6月14日至7月15日举行;
+</i-notice-bar> -->
+<!-- <i-tab-bar fixed="true" current="{{ current }}" bindchange="handleChange">
+  <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="Home"></i-tab-bar-item>
+  <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="Friends"></i-tab-bar-item>
+  <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" count="3" title="Notice"></i-tab-bar-item>
+  <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" dot title="My"></i-tab-bar-item>
+</i-tab-bar> -->
+
+<van-card wx:for="{{song_list}}"
+  tag="{{item.language}}"
+  price="{{item.country}}"
+  desc="{{item.author}}"
+  title="{{item.title}}"
+  thumb="{{item.pic_big}}"
+>
+  <!-- <view slot="footer">
+    <van-button size="mini">按钮</van-button>
+    <van-button size="mini">按钮</van-button>
+  </view> -->
+</van-card>

@@ -1,1 +1,11 @@
-{}
+{
+  "usingComponents": {
+    "i-button": "../../dist/button/index",
+    "i-card": "../../dist/card/index",
+    "i-tab-bar": "../../dist/tab-bar/index",
+    "i-tab-bar-item": "../../dist/tab-bar-item/index",
+    "i-notice-bar": "../../dist/notice-bar/index",
+    "van-search": "../../vant/search/index",
+    "van-card": "../../vant/card/index"
+  }
+}
