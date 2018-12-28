@@ -1,4 +1,3 @@
-
 <!-- <van-search value="{{ value }}" placeholder="请输入搜索关键词" /> -->
 <!-- <i-notice-bar icon="systemprompt" loop>
   2018年世界杯,将于6月14日至7月15日举行;2018年世界杯,将于6月14日至7月15日举行;
@@ -9,16 +8,11 @@
   <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" count="3" title="Notice"></i-tab-bar-item>
   <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" dot title="My"></i-tab-bar-item>
 </i-tab-bar> -->
-
-<van-card wx:for="{{song_list}}"
-  tag="{{item.language}}"
-  price="{{item.country}}"
-  desc="{{item.author}}"
-  title="{{item.title}}"
-  thumb="{{item.pic_big}}"
->
-  <!-- <view slot="footer">
+<navigator wx:for="{{song_list}}" url="/pages/play/play?id={{item.song_id}}">
+  <van-card  tag="{{item.language}}" price="{{item.country}}" desc="{{item.author}}" title="{{item.title}}" thumb="{{item.pic_big}}">
+    <!-- <view slot="footer">
     <van-button size="mini">按钮</van-button>
     <van-button size="mini">按钮</van-button>
   </view> -->
-</van-card>
+  </van-card>
+</navigator>

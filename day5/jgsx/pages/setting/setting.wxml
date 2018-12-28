@@ -1,11 +1,18 @@
-<!--pages/setting/setting.wxml-->
-<!-- V -->
-<text>演员</text>
-<text>{{name}}</text>
-<text>技能</text>
-<text>{{skill}}</text>
-
-
-<view wx:for="{{skill}}">{{item}}</view>
-<view wx:if="{{age >= 19}}">WEBVIEW</view>
-<view bindtap="add">按钮</view>
+<!-- <van-search value="{{ value }}" placeholder="请输入搜索关键词" /> -->
+<!-- <i-notice-bar icon="systemprompt" loop>
+  2018年世界杯,将于6月14日至7月15日举行;2018年世界杯,将于6月14日至7月15日举行;
+</i-notice-bar> -->
+<!-- <i-tab-bar fixed="true" current="{{ current }}" bindchange="handleChange">
+  <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="Home"></i-tab-bar-item>
+  <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="Friends"></i-tab-bar-item>
+  <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" count="3" title="Notice"></i-tab-bar-item>
+  <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" dot title="My"></i-tab-bar-item>
+</i-tab-bar> -->
+<navigator wx:for="{{song_list}}" url="/pages/play/play?id={{item.song_id}}">
+  <van-card  tag="{{item.language}}" price="{{item.country}}" desc="{{item.author}}" title="{{item.title}}" thumb="{{item.pic_big}}">
+    <!-- <view slot="footer">
+    <van-button size="mini">按钮</van-button>
+    <van-button size="mini">按钮</van-button>
+  </view> -->
+  </van-card>
+</navigator>

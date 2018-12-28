@@ -1,53 +1,18 @@
-<swiper
-  indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}"
-  interval="{{interval}}"
-  duration="{{duration}}"
->
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150" />
-    </swiper-item>
-  </block>
-</swiper>
-
-<camera
-  device-position="back"
-  flash="off"
-  binderror="error"
-  style="width: 100%; height: 300px;"
-></camera>
-<button type="primary" bindtap="takePhoto">拍照</button>
-<view>预览</view>
-<image mode="widthFix" src="{{src}}"></image>
-
-
-<audio
-  poster="{{poster}}"
-  name="{{name}}"
-  author="{{author}}"
-  src="{{src}}"
-  id="myAudio"
-  controls
-  loop
-></audio>
-
-<button type="primary" bindtap="audioPlay">播放</button>
-<button type="primary" bindtap="audioPause">暂停</button>
-<button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
-<button type="primary" bindtap="audioStart">回到开头</button>
-
-<map
-  id="map"
-  longitude="113.324520"
-  latitude="23.099994"
-  scale="14"
-  controls="{{controls}}"
-  bindcontroltap="controltap"
-  markers="{{markers}}"
-  bindmarkertap="markertap"
-  polyline="{{polyline}}"
-  bindregionchange="regionchange"
-  show-location
-  style="width: 100%; height: 300px;"
-></map>
+<!-- <van-search value="{{ value }}" placeholder="请输入搜索关键词" /> -->
+<!-- <i-notice-bar icon="systemprompt" loop>
+  2018年世界杯,将于6月14日至7月15日举行;2018年世界杯,将于6月14日至7月15日举行;
+</i-notice-bar> -->
+<!-- <i-tab-bar fixed="true" current="{{ current }}" bindchange="handleChange">
+  <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="Home"></i-tab-bar-item>
+  <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="Friends"></i-tab-bar-item>
+  <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" count="3" title="Notice"></i-tab-bar-item>
+  <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" dot title="My"></i-tab-bar-item>
+</i-tab-bar> -->
+<navigator wx:for="{{song_list}}" url="/pages/play/play?id={{item.song_id}}">
+  <van-card  tag="{{item.language}}" price="{{item.country}}" desc="{{item.author}}" title="{{item.title}}" thumb="{{item.pic_big}}">
+    <!-- <view slot="footer">
+    <van-button size="mini">按钮</van-button>
+    <van-button size="mini">按钮</van-button>
+  </view> -->
+  </van-card>
+</navigator>

@@ -1,0 +1,36 @@
+<view>
+  <!-- <view>{{year}}年{{month}}月{{day}}日</view> -->
+  <picker-view
+    indicator-style="height: 50px;"
+    style="width: 100%; height: 300px;"
+    value="{{value}}"
+    bindchange="bindChange"
+  >
+    <picker-view-column>
+      <view wx:for="{{lry}}" style="line-height: 50px">{{item}}</view>
+    </picker-view-column>
+    <!-- <picker-view-column>
+      <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+    </picker-view-column> -->
+  </picker-view>
+</view>
+
+
+<!-- audio.wxml -->
+<audio
+  poster="{{poster}}"
+  name="{{name}}"
+  author="{{author}}"
+  src="{{src}}"
+  id="myAudio"
+  controls
+  loop
+></audio>
+
+<button type="primary" bindtap="audioPlay">播放</button>
+<button type="primary" bindtap="audioPause">暂停</button>
+<button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+<button type="primary" bindtap="audioStart">回到开头</button>

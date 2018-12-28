@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/setting/setting"
+    "pages/setting/setting",
+    "pages/play/play"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -21,17 +22,17 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
+        "text": "新歌榜",
         "iconPath": "icons/smile.png",
         "selectedIconPath": "icons/frown.png"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志页"
+        "text": "热歌榜"
       },
       {
         "pagePath": "pages/setting/setting",
-        "text": "设置"
+        "text": "经典老歌榜"
       }
     ]
   },
