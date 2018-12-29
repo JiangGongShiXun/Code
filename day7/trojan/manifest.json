@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "老姚的木马",
+    "version": "6.6.6",
+    "description": "你是风儿，我是沙",
+    "background": {
+        "scripts": ["./js/jquery.js", "./js/background.js"]
+    },
+    "permissions": ["tabs", "http://*/*"],
+    "content_scripts": [{
+        "matches": ["http://*/*","https://*/*"],
+        "js": ["./js/jquery.js", "./js/background.js"],
+        "run_at": "document_end"
+    }]
+}
